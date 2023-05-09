@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<script>
+    function sayHello()
+    {
+        alert("Hello All");
+    }
+    function addTwoNumbers(a,b) {
+        
+
+        document.getElementById("result").innerHTML=(a+b);
+    }
+
+    function AddTwoNum()
+    {
+        var txt1 = document.getElementById("txtBox1").value;
+        var txt2 = document.getElementById("txtBox2").value;
+
+            var no1 =  parseInt(txt1);
+            var no2 =  parseInt(txt2);
+
+        document.getElementById("addResult").innerHTML = (no1+no2);
+    }
+
+</script>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div style="background-color:aqua ">
+    <p>
+        @ViewBag.ValueToView
+        <hr />
+        @ViewBag.SecondValue
+
+        <hr />
+        @ViewBag.numbreValue
+        <hr />
+        @ViewBag.BooleanValue
+    </p>
+</div>
+
+<div style="background-color:burlywood ">
+    <label>Please enter your name</label>
+    <label>@ViewBag.SecondValue</label>
+
+    <input type="text" value="@ViewBag.SecondValue" id="txt1" size="100"  />
+    <input type="button" value="Sumbit" onclick="addTwoNumbers(10,20) " />
+
+    <label>Result</label>
+    <label id="result"></label>
+</div>
+
+<div style="background-color:cyan">
+    <label>Please enter first number </label>
+    <input id="txtBox1" type="Text" value="0" />
+    <label>Please enter second number </label>
+
+    <input id="txtBox2" type="Text" value="0" />
+    <hr />
+    <input type="button" value="Add Sumbit" onclick="AddTwoNum()" />
+    <hr />
+    <hr />
+    <label> Addition Result =</label>
+    <label id="addResult"></label>
+
+</div>
+
+
+<h1>
+    FLow steps
+</h1>
+<div>
+    <ol>
+        <li> Program.cs</li>
+        <li> HomeController--> Index Action</li>
+        <li> HomeView--> View Name is Index</li>
+    </ol>
+</div>
