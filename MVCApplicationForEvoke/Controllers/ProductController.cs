@@ -31,14 +31,18 @@ namespace MVCApplicationForEvoke.Controllers
                 Dancing = "Indian Dance"
             };
 
-
-            string result = DisplayDetails(woman);
-
-             
+            string result = DisplayDetails(man);
 
             return View(productModel);
         }
 
+        /// <summary>
+        /// This function will display the object deials
+        /// Ex: Person p -new Peron();
+        /// Man m=new Man
+        /// </summary>
+        /// <param name="p">This person type data</param>
+        /// <returns>Welcome the  object name</returns>
         private string DisplayDetails(Person p)
         {
             string result = "Welcome ";
