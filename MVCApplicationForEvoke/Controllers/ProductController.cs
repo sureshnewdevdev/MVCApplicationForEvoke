@@ -7,13 +7,52 @@ namespace MVCApplicationForEvoke.Controllers
     {
         public IActionResult Index()
         {
-            ProductModel productModel = new ProductModel();            
+
+            #region model example
+            ProductModel productModel = new ProductModel();
 
             productModel.Id = 10;
             productModel.ProductName = "Apple";
             productModel.Price = 120;
+            #endregion
+
+            Person p = new Person();
+
+            Man man = new Man()
+            {
+                Id = "1",
+                Name = "Raja",
+                PlayingGames = "Cricket"
+            };
+            Woman woman = new Woman()
+            {
+                Id = "2",
+                Name = "Rajee",
+                Dancing = "Indian Dance"
+            };
+
+
+            string result = DisplayDetails(woman);
+
+             
 
             return View(productModel);
+        }
+
+        private string DisplayDetails(Person p)
+        {
+            string result = "Welcome ";
+
+            if (p is Man)
+            {
+                result = result + "Mr " + p.Name;
+            }
+            if (p is Woman)
+            {
+                result = result + "Ms " + p.Name;
+            }
+
+            return result;
         }
     }
 }
