@@ -31,6 +31,10 @@ namespace MVCApplicationForEvoke.Controllers
                 Dancing = "Indian Dance"
             };
 
+            p = man;
+
+            Man? convObj = p as Man;
+             
             string result = DisplayDetails(man);
 
             return View(productModel);
