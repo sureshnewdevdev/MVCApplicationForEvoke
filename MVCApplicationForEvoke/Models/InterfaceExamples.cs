@@ -19,7 +19,7 @@
             return "Welcome " + name + " Salary " + salary;
         }
     }
-    #endregion
+    
 
 
     public interface ITestResult
@@ -42,5 +42,38 @@
             return (decimal)10;
         }
     }
+    #endregion
 
+    public interface IDancingBird
+    {
+       void Dacing();
+    }
+
+
+    public interface ISingingBird
+    {
+        void Sing();
+    }
+
+
+    public class Peacock : IDancingBird
+    {
+        public void Dacing()
+        {
+             
+        }
+    }
+
+    public class PenQueen : ISingingBird, IDancingBird
+    {
+        public void Dacing()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Sing()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
