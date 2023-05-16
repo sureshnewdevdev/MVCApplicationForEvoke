@@ -33,4 +33,7 @@ sum = f.SumAndAvg(x, y,ref avg,out big);
 Console.WriteLine(sum);
 Console.WriteLine(avg);
 
+CollectionExample example = new CollectionExample();
+
+example.ExampleOfArray();
 Console.ReadLine();
