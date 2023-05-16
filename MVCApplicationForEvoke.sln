@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCApplicationForEvoke", "MVCApplicationForEvoke\MVCApplicationForEvoke.csproj", "{4F2C1028-1B61-4975-868E-86110BA4BBD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCApplicationForEvoke", "MVCApplicationForEvoke\MVCApplicationForEvoke.csproj", "{4F2C1028-1B61-4975-868E-86110BA4BBD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopsBasics", "OopsBasics\OopsBasics.csproj", "{AA649724-67C3-4003-95B8-ED92F4AF4B8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4F2C1028-1B61-4975-868E-86110BA4BBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F2C1028-1B61-4975-868E-86110BA4BBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F2C1028-1B61-4975-868E-86110BA4BBD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA649724-67C3-4003-95B8-ED92F4AF4B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA649724-67C3-4003-95B8-ED92F4AF4B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA649724-67C3-4003-95B8-ED92F4AF4B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA649724-67C3-4003-95B8-ED92F4AF4B8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

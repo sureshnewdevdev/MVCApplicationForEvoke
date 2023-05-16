@@ -19,7 +19,20 @@
             return "Welcome " + name + " Salary " + salary;
         }
     }
-    
+
+    public class ExWoman : IPerson
+    {
+        public int AddTwoNumbers(int a, int b)
+        {
+            return a + b;
+        }
+
+        public string DisplayDetails(string name, decimal salary)
+        {
+            return "Welcome " + name + " Salary " + salary;
+        }
+    }
+
 
 
     public interface ITestResult
@@ -76,4 +89,27 @@
             throw new NotImplementedException();
         }
     }
+
+    public class ManagePerson
+    {
+
+        public string ShowObjectType( IPerson person)
+        {
+            return  person.GetType().Name;
+        }
+
+        public string Callwe()
+        {
+            ExMan exMan = new ExMan();
+            string result =  ShowObjectType( exMan );
+
+            ExWoman exWoman= new ExWoman();
+            result = ShowObjectType(exWoman);
+            return result;
+        }
+    }
 }
+
+
+// i=PNR 
+// i = period * inter
