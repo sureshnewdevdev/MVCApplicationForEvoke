@@ -21,6 +21,9 @@ namespace OopsBasics
             arrayList.Add("SSS");
             arrayList.Add(true);
 
+             
+
+
             Stack stack = new Stack();
             stack.Push(1);
             stack.Push(2);
@@ -89,9 +92,40 @@ namespace OopsBasics
                 Console.WriteLine(item);
             }
 
+            var coll = from item in strList
+                       orderby item descending
+                       select item.ToUpper();
 
 
+            foreach (var item in coll)
+            {
+                Console.WriteLine(item);
+            }
+
+            List<Student> students = new List<Student>();
+            students.Add(new Student { Id = 5, Name="A", Rank=2 }) ;
+            students.Add(new Student { Id = 2, Name="e", Rank= 5 }) ;
+            students.Add(new Student { Id = 2, Name="d", Rank= 4 }) ;
+            students.Add(new Student { Id = 3, Name="b", Rank= 1 }) ;
+            students.Add(new Student { Id = 4, Name="c", Rank= 3 }) ;
+
+            var orderbyNameStudents = from stu in students
+                                      orderby stu.Name descending
+                                      select stu.Name;
+            var orderbyRankStudents = from stu in students
+                                      orderby stu.Rank ascending
+                                      select new { Name=stu.Name, rank=stu.Rank, id=stu.Id };
+            var orderbyIdStudents = from stu in students
+                                      orderby stu.Id ascending
+                                      select new { Name = stu.Name, rank = stu.Rank, id = stu.Id };
 
         }
+    }
+
+    public class Student
+    {
+        public int Id { get; set; }
+        public string  Name { get; set; }
+        public int Rank { get; set; }
     }
 }
