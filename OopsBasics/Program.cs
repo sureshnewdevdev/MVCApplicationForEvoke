@@ -23,17 +23,12 @@ Console.WriteLine(parentXClass.GetName());
 
 FunctionExamples f = new FunctionExamples();
 
-int x=190;
-int y=210;
-int avg = 0;
-int sum = 0;
-int big;
-sum = f.SumAndAvg(x, y,ref avg,out big);
 
-Console.WriteLine(sum);
-Console.WriteLine(avg);
+// In Abstract - Virtual , Sealed, Staic
 
-CollectionExample example = new CollectionExample();
+var result =MathUtility.Add(10M, 23.677M);
 
-example.ExampleOfArray();
+MyClass my=new MyClass();
+my.Mul(10, 10);
+
 Console.ReadLine();
