@@ -15,7 +15,7 @@
             {
                 Console.WriteLine(" Method 1 " + i);
                 // Do something
-                Task.Delay(3000);
+                Task.Delay(3000).Wait();
             }
         });
     }
@@ -29,7 +29,7 @@
             {
                 Console.WriteLine("---------------------------------------- Method 2 -- " + i);
                 // Do something
-                Task.Delay(1000);
+                Task.Delay(1000).Wait();
             }
 
         });
